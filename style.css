@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+*, ::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --red-box: hsl(0, 78%, 62%);
+    --cyan-box: hsl(180, 62%, 55%);
+    --orange-box: hsl(34, 97%, 64%);
+    --blue-box: hsl(212, 86%, 64%);
+    --dark-blue: hsl(234, 12%, 34%);
+    --gray-blue: hsl(229, 6%, 66%);
+    --light-gray: hsl(0, 0%, 98%);
+    --card-padding: 1.5em;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-gray);
+}
+
+
+.container{
+    padding: 4em 2em;
+    max-width: 1440px;
+    margin: 0 auto;
+
+   
+}
+
+.main{
+    margin: 0 auto;
+}
+
+h1, h2{
+    color: var(--dark-blue);
+}
+
+h2{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.25em;
+}
+
+p{
+    color:var(--gray-blue);
+    font-size: 0.9375rem;
+    font-weight: 200;
+}
+
+header{
+    text-align: center;
+}
+
+.title{
+    font-size: 1.5rem;
+    font-weight: 200;;
+}
+
+.title span{
+    font-weight: 600;
+}
+
+.intro{
+    text-align: center;
+    margin: 1em auto 3em auto;
+    max-width: 490px;
+
+}
+
+.main .card{
+    background-color: white;
+    margin: 1.5em auto;
+    max-width: 350px;
+    min-height: 220px;
+    padding: var(--card-padding);
+    border-radius: 8px;
+    background-repeat: no-repeat;
+    background-size: 55px;
+    background-position:  calc(100% - var(--card-padding)) calc(100% - var(--card-padding));
+   
+}
+
+.supervisor{
+    border-top: 3px solid var(--cyan-box);
+    background-image: url("./images/icon-supervisor.svg");
+   
+    
+}
+
+.team-builder{
+    border-top: 3px solid var(--red-box);
+    background-image: url("./images/icon-team-builder.svg");
+    
+}
+.karma{
+    border-top: 3px solid var(--orange-box);
+    background-image: url("./images/icon-karma.svg");
+   
+}
+.calculator{
+    border-top: 3px solid var(--blue-box);
+    background-image: url("./images/icon-calculator.svg");
+}
+
+@media(min-width: 650px){
+
+    .main{
+        max-width: 650px;
+    }
+
+    .flex{
+        display: flex;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .flex > *{
+        flex: 1 1 50%;
+    }
+}
+
+@media(min-width: 1100px){
+
+    .container{
+        padding: 2em;
+    }
+
+    .main{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1em;
+        max-width: 1100px;
+    }
+
+    .intro{
+        margin-bottom: 1em;
+    }
+
+    .flex{
+        display: block;
+    }
+}
+
+
